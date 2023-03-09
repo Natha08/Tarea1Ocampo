@@ -1,16 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.t1.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane prefHeight="500.0" prefWidth="700.0" snapToPixel="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.t1.Controller">
+   <children>
+      <TextField id="tf1" fx:id="tf1" layoutX="161.0" layoutY="195.0" onAction="#add" />
+      <ComboBox id="cmbx1" fx:id="cmbx1" layoutX="161.0" layoutY="250.0" onAction="#add" prefWidth="150.0" />
+      <Button id="bttn1" fx:id="bttn1" layoutX="184.0" layoutY="362.0" mnemonicParsing="false" onAction="#add" text="Persona" />
+      <Label fx:id="labelPersona" graphicTextGap="5.0" layoutX="102.0" layoutY="133.0" onDragDetected="#add" text=" Agregar persona " textAlignment="CENTER">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelOperacion" layoutX="415.0" layoutY="120.0" onDragDetected="#add" prefHeight="52.0" prefWidth="131.0" text="Operaciones " AnchorPane.bottomAnchor="328.0" AnchorPane.leftAnchor="415.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+      <TextField id="tfEdad" fx:id="tfEdad" layoutX="161.0" layoutY="308.0" onAction="#add" />
+      <Label fx:id="label" layoutX="49.0" layoutY="199.0" onDragDetected="#add" text="Nombre:">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelP" layoutX="49.0" layoutY="254.0" onDragDetected="#add" text="Provincia:">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labeledad" layoutX="59.0" layoutY="312.0" onDragDetected="#add" text="Edad:">
+         <font>
+            <Font name="Century" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPersona1" layoutX="415.0" layoutY="200.0" onDragDetected="#add" text="Persona 1 ">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPersona2" layoutX="415.0" layoutY="276.0" onDragDetected="#add" text="Persona 2">
+         <font>
+            <Font name="Century" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbxP1" layoutX="415.0" layoutY="238.0" onAction="#add" prefWidth="150.0" />
+      <ComboBox fx:id="cmbxP2" layoutX="415.0" layoutY="319.0" onAction="#add" prefWidth="150.0" />
+      <Button fx:id="bttnmas" layoutX="402.0" layoutY="401.0" mnemonicParsing="false" onAction="#add" text="+">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnmenos" layoutX="470.0" layoutY="401.0" mnemonicParsing="false" onAction="#add" prefHeight="43.0" prefWidth="41.0" text="-">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="535.0" layoutY="401.0" mnemonicParsing="false" onAction="#add" prefHeight="43.0" prefWidth="41.0" text="*">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="591.0" layoutY="401.0" mnemonicParsing="false" onAction="#add" prefHeight="43.0" prefWidth="42.0" text="/">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tfR" layoutX="104.0" layoutY="50.0" onAction="#add" prefHeight="26.0" prefWidth="465.0" text="Resultado:">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </TextField>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
